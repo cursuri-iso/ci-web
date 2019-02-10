@@ -126,6 +126,68 @@
           }
         }
       }
+    },
+    "core-lib": {
+      "root": "libs/core-lib",
+      "sourceRoot": "libs/core-lib/src",
+      "projectType": "library",
+      "prefix": "ci-web",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/core-lib/src/test.ts",
+            "tsConfig": "libs/core-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/core-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core-lib/tsconfig.lib.json",
+              "libs/core-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "domain-lib": {
+      "root": "libs/domain-lib",
+      "sourceRoot": "libs/domain-lib/src",
+      "projectType": "library",
+      "prefix": "ci-web",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/domain-lib/src/test.ts",
+            "tsConfig": "libs/domain-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/domain-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/domain-lib/tsconfig.lib.json",
+              "libs/domain-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

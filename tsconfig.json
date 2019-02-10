@@ -12,7 +12,10 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2017", "dom"],
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ci-web/core-lib": ["libs/core-lib/src/index.ts"],
+      "@ci-web/domain-lib": ["libs/domain-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

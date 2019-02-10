@@ -13,6 +13,12 @@
     },
     "admin-e2e": {
       "tags": []
+    },
+    "core-lib": {
+      "tags": []
+    },
+    "domain-lib": {
+      "tags": []
     }
   }
 }
